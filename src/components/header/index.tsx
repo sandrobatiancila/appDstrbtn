@@ -4,6 +4,7 @@ function AppHeader() {
   return (
     <View style={styleC.bg}>
       <Text style={styleC.txtColor}>App Diss, G Act.</Text>
+      <Text>Branch-2</Text>
     </View>
   );
 }
