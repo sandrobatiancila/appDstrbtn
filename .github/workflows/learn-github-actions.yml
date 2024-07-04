@@ -11,3 +11,8 @@ jobs:
           node-version: '20'
       - run: npm install -g bats
       - run: bats -v
+
+      - run: npx nx affected:lint --base=${{ github.event.pull_request.base.sha }} --head=HEAD
+      - run: npx nx affected:test --base=${{ github.event.pull_request.base.sha }} --head=HEAD --configuration=ci
+      - run: npx nx affected:build --base=${{ github.event.pull_request.base.sha }} --head=HEAD
+
