@@ -3,7 +3,8 @@ import {View, Text, StyleSheet} from 'react-native';
 function AppHeader() {
   return (
     <View style={styleC.bg}>
-      <Text style={styleC.txtColor}>App Diss, G Act.</Text>
+      <Text style={styleC.txtColor}>App Distribution, Firebase Actions.</Text>
+      <Text>This is a sample branch-1</Text>
     </View>
   );
 }
