@@ -7,6 +7,8 @@ function AppHeader() {
       <Text>This is a sample branch-1</Text>
       <Text style={styleC.txtColor}>App Diss, G Act.</Text>
       <Text>Branch-2</Text>
+      <Text style={styleC.txtColor}>App Distribution, Firebase Actions.</Text>
+      <Text>This is a sample branch-1</Text>
     </View>
   );
 }
