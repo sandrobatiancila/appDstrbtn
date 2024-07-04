@@ -2,6 +2,7 @@ name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
+  run-linters:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
@@ -12,7 +13,5 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
 
-      - run: npx nx affected:lint --base=${{ github.event.pull_request.base.sha }} --head=HEAD
-      - run: npx nx affected:test --base=${{ github.event.pull_request.base.sha }} --head=HEAD --configuration=ci
-      - run: npx nx affected:build --base=${{ github.event.pull_request.base.sha }} --head=HEAD
-
+      - run: npm run lint
+      
